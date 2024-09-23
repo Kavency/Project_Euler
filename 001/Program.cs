@@ -7,5 +7,14 @@
 //
 // Find the sum of all the multiples of 3 or 5 below 1000.
 
+ulong totals = 0;
 
+for (int i = 1; i < 1000; i++)
+{
+    if (i % 3 == 0 || i % 5 == 0)
+    {
+        totals += (ulong)i;
+    }
+}
 
+Console.WriteLine(totals);
