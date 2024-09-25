@@ -8,3 +8,22 @@
 // By considering the terms in the Fibonacci sequence whose values
 // do not exceed four million, find the sum of the even-valued terms.
 
+int sumOfAllEvenFibonaccis = 2;
+int lastFibo = 2;
+int currentFibo = 3;
+
+for ( int i = 1;currentFibo < 4000000; i++)
+{
+    if(i > 2 && i == lastFibo + currentFibo)
+    {
+        lastFibo = currentFibo;
+        currentFibo = i;
+
+        if (currentFibo % 2 == 0)
+        {
+            sumOfAllEvenFibonaccis += currentFibo;
+        }
+    }
+}
+Console.WriteLine("---------------------");
+Console.WriteLine(sumOfAllEvenFibonaccis);
